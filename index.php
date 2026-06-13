@@ -1,5 +1,10 @@
 <?php
+$con = null;
 include 'koneksi.php';
+
+if (!$con) {
+    die('Koneksi database tidak tersedia.');
+}
 
 $query = mysqli_query($con, "SELECT * FROM dosen");
 ?>
